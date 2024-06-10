@@ -1,36 +1,30 @@
-function reverseWords(kalimat) {
-    let reversedWords = ''
-    let hurufAwal = 0
-
-    for (let i = 0; i <= kalimat.length; i++) {
-        if (!kalimat[i]) {
-            let kata = ''
-            for (let j = hurufAwal; j < i; j++) {
-                kata += kalimat[j]
+const reverseWords = (kalimat)=>{
+    let arr = []
+    let ba, bb = 0
+    for(let i=0; i < kalimat.length; i++){
+        if(kalimat[i] === " " || i === kalimat.length - 1){
+            if(i === kalimat.length - 1){
+                ba = i + 1
+            }else{
+                ba = i
             }
-            if (reversedWords === '') {
-                reversedWords = kata
-            } else {
-                reversedWords = kata + ' ' + reversedWords
+            let kata = ""
+            for(let j=bb; j < ba; j++){
+                kata+=kalimat[j]
             }
-            hurufAwal = i + 1
-        }
-        if (kalimat[i] === ' ') {
-            let kata = ''
-            for (let j = hurufAwal; j < i; j++) {
-                kata += kalimat[j]
-            }
-            if (reversedWords === '') {
-                reversedWords = kata
-            } else {
-                reversedWords = kata + ' ' + reversedWords
-            }
-            hurufAwal = i + 1
+            arr = [kata, ...arr]
+            bb = ba + 1
         }
     }
-
-    return reversedWords
+    let hasil = ""
+    for (let i = 0; i < arr.length; i++){
+        if(i > 0){
+            hasil += " "+arr[i]
+        }else{
+            hasil += arr[i]
+        }
+    }
+    console.log(hasil)
 }
-let kalimat = "Saya Belajar Javascript"
-let kalimatTerbalik = reverseWords(kalimat)
-console.log(kalimatTerbalik)
+
+reverseWords("Saya Belajar JavaScript")
