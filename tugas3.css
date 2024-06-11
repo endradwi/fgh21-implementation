@@ -1,0 +1,46 @@
+div{
+    border-radius: 10px;
+    background-color:  #2a2a69;
+    width: 500px;
+    height: 500px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+h1{
+    background-color:  #242156;
+    color: white;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    text-align: center;
+    padding: 10px;
+    font-size: 25px;
+}
+form{
+    text-align: center;
+}
+form input{
+    border-radius: 5px;
+    width: 300px;
+    height: 35px;
+}
+
+
+div .field{
+    height: 0;
+    width: 550px;
+    text-align: justify;
+    font-size: 12px;
+    margin-left: 80px;
+    color: white;
+}
+button{
+    color: white;
+    background-color: greenyellow;
+    background-image: linear-gradient(greenyellow, green);
+    border : none;
+    width: 100px;
+    height: 30px;
+    border-radius: 10px;
+    margin-left: 250px;
+    margin-top: 20px;
+}
